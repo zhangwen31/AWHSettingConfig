@@ -1,0 +1,6 @@
+framework module AWHSettingConfig {
+  umbrella header "AWHSettingConfig.h"
+  export *
+
+  module * { export * }
+}
