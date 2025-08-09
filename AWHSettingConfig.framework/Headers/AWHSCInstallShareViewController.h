@@ -1,5 +1,5 @@
 //
-//  AWHSCSystemViewController.h
+//  AWHSCInstallShareViewController.h
 //  AWHSettingConfig
 //
 //  Created by 王恒 on 2023/8/5.
@@ -9,9 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AWHSCSystemViewController : AWHBBBaseViewController
-
-@property (nonatomic, assign) BOOL isCar;
+@interface AWHSCInstallShareViewController : AWHBBBaseViewController
 
 @end
 

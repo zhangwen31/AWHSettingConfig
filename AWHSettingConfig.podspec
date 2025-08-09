@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  作者元数据―――――――――――――――――――――――――――――― #
@@ -120,9 +120,15 @@ Pod::Spec.new do |s|
 #
 #  s.public_header_files = "AWHSettingConfig/**/*.h"
 
-    s.vendored_frameworks = ['AWHSettingConfig.framework']
-    s.source_files = 'AWHSettingConfig.framework/Headers/*h'
-    s.pod_target_xcconfig = {'VALID_ARCHS' => 'armv7 arm64'}
+  s.vendored_frameworks = ['AWHSettingConfig.framework']
+  s.source_files = 'AWHSettingConfig.framework/Headers/*h'
+  s.pod_target_xcconfig = {
+    "IPHONEOS_DEPLOYMENT_TARGET" => "13.0",
+    'VALID_ARCHS' => 'x86_64 armv7 arm64'
+  }
+  s.user_target_xcconfig = {
+    "IPHONEOS_DEPLOYMENT_TARGET" => "13.0"
+  }
     s.static_framework = true
     
     s.swift_version='5.0'
@@ -206,7 +212,7 @@ Pod::Spec.new do |s|
   s.dependency 'MJExtension'
   s.dependency 'YYImage'
   s.dependency 'AFNetworking'
-  s.dependency 'Charts'
+  s.dependency 'DGCharts'
   s.dependency 'SAMKeychain'
   s.dependency 'MJRefresh'
   s.dependency "AWHBoneResources"
